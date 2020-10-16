@@ -16,5 +16,7 @@ test('it should login in aplication', async ({ assert, client }) => {
 
   const response = await client.post('/session').send(sessionPaylod).end();
 
+  console.log(response.body)
+
   assert.exists(response.body.token);
 });
